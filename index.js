@@ -1,9 +1,11 @@
+'use strict'
+
 STORE = [{question: "How many wives did Henry VIII have?", 
 options: [4, 1, 8, 6], 
 correct: 6}, 
 {question: "Henry VIII was succeeded by:", 
 options: ["Mary I of England", "Edward VI of England", "Elizabeth I of England", "Mary Queen of Scots"], 
-correct: "Edward VI of England"}, 
+correct: "Edward VI of England"},
 {question: "Henry VIII annuled his marriage to:", 
 options: ["Catherine of Aragorn", "Jane Seymour", "Anne Boleyn", "Anne of Cleves"], 
 correct: "Catherine of Aragorn"},
@@ -13,32 +15,29 @@ correct: "Anne of Cleves"},
 {question: "Which wife did Henry VIII execute?",
 options: ["Catherine of Aragorn", "Anne Boleyn", "Jane Seymour", "Anne of Cleves"],
 correct: "Anne of Cleves"}, 
-questionNumber: 0,
-storedScore: 0];
+{questionNumber: 0}, 
+{storedScore: 0}];
 
 //start the quiz
 
 function startQuiz() {
-    const startButton = $(.start-button)
-    $(startButton.on('click', function (event) {
+    $('.start-button').on('click', function (event) {
         for (let i = 0; i < 5; i++) {
             let currentSTORE = STORE[i];
-            let insertHTML = $(`<div class="question-form">
-                <p>${currentSTORE.question}</p>
-                <ul>
-                    <li>${currentStore.options[0]}</li>
-                    <li>${currentStore.options[1]}</li>
-                    <li>${currentStore.options[2]}</li>
-                    <li>${currentStore.options[3]}</li>
-            </div>)`
+        
+        let insertHTML = $(`<div class="question-form">
+           <p>${currentSTORE.question}</p>
+            <ul>
+                <li>${currentStore.options[0]}</li>
+                <li>${currentStore.options[1]}</li>
+                <li>${currentStore.options[2]}</li>
+                <li>${currentStore.options[3]}</li>
+         </div>)`);
+        })
 
-            $(".main").html(insertHTML)
-            )
-            )
-            );
-        };
-
-    });
+    $(".main").html(insertHTML);
+    console.log('this ran')
+    }
 };
 
 
@@ -99,7 +98,7 @@ function resetQuiz() {
 
 };
 
-function generateQuiz {
+function generateQuiz() {
     startQuiz();
     resetQuiz();
     failedQuiz();
@@ -111,4 +110,4 @@ function generateQuiz {
     updateScore();
 };
 
-$(generateQuiz);
+$(generateQuiz());
