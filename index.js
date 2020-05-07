@@ -2,7 +2,7 @@
 
 const STORE = [{question: "How many wives did Henry VIII have?", 
 options: ["A) 4", "B) 1", "C) 8", "D) 6"], 
-correct: "A"}, 
+correct: "D"}, 
 {question: "Henry VIII was succeeded by:", 
 options: ["A) Mary I of England", "B) Edward VI of England", "C) Elizabeth I of England", "D) Mary Queen of Scots"], 
 correct: "B"},
@@ -38,7 +38,7 @@ function presentQuestion() {
             $('.js-answer').empty();
             
             if (i < 5) {
-                $('.main').html(`<p>${STORE[i].question}</p><input name="test" type="radio" value="A" />${STORE[i].options[0]}<input name="test" type="radio" value="B" />${STORE[i].options[1]}<input name="test" type="radio" value="C" />${STORE[i].options[2]}<input name="test" type="radio" value="D" />${STORE[i].options[3]}`);
+                $('.main').html(`<p>${STORE[i].question}</p><input name="test" type="radio" value="A" />${STORE[i].options[0]}<br><input name="test" type="radio" value="B" />${STORE[i].options[1]}<br><input name="test" type="radio" value="C" />${STORE[i].options[2]}<br><input name="test" type="radio" value="D" />${STORE[i].options[3]}`);
                 i++;
             } else {
                     $('.main').html(`<p>DONE</p>`);
