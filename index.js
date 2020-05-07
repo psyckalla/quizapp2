@@ -1,6 +1,6 @@
 'use strict'
 
-STORE = [{question: "How many wives did Henry VIII have?", 
+const STORE = [{question: "How many wives did Henry VIII have?", 
 options: [4, 1, 8, 6], 
 correct: 6}, 
 {question: "Henry VIII was succeeded by:", 
@@ -21,23 +21,10 @@ correct: "Anne of Cleves"},
 //start the quiz
 
 function startQuiz() {
-    $('.start-button').on('click', function (event) {
-        for (let i = 0; i < 5; i++) {
-            let currentSTORE = STORE[i];
-        
-        let insertHTML = $(`<div class="question-form">
-           <p>${currentSTORE.question}</p>
-            <ul>
-                <li>${currentStore.options[0]}</li>
-                <li>${currentStore.options[1]}</li>
-                <li>${currentStore.options[2]}</li>
-                <li>${currentStore.options[3]}</li>
-         </div>)`);
-        })
+    
 
-    $(".main").html(insertHTML);
-    console.log('this ran')
-    }
+
+    console.log('start quiz ran');
 };
 
 
@@ -45,13 +32,16 @@ function startQuiz() {
 
 function updateScore() {
 
+    console.log('updatescore ran');
+
 };
 
 
 //update question number
 
 function updateQuestionNumber() {
-    store.questionNumber++;
+
+    console.log('updatequestionnumber ran');
 
 };
 
@@ -61,12 +51,16 @@ function updateQuestionNumber() {
 
 function presentQuestion() {
 
+    console.log('presentquestion ran');
+
 };
 
 
 //question is correct
 
 function correctQuestion() {
+
+    console.log('correctquestion ran');
 
 };
 
@@ -75,12 +69,16 @@ function correctQuestion() {
 
 function incorrectQuestion() {
 
+    console.log('incorrectquestion ran');
+
 };
 
 
 //passed the quiz
 
 function passedQuiz() {
+
+    console.log('passedquiz ran');
 
 };
 
@@ -89,12 +87,16 @@ function passedQuiz() {
 
 function failedQuiz() {
 
+    console.log('failedquiz ran');
+
 };
 
 
 //reset the quiz
 
 function resetQuiz() {
+
+    console.log('resetquiz ran');
 
 };
 
