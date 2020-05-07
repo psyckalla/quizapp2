@@ -12,3 +12,18 @@
 .hidden {
     display: none;
 }
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    flex-direction: row;
+}
+
+img (
+    margin-left: auto;
+    margin-right: auto;
+)
