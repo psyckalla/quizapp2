@@ -36,6 +36,10 @@ function presentQuestion() {
 
         $('.start-button, .next-button').on('click', function(event) {
             $('.js-answer').empty();
+            $('input[name="test"]').prop('disabled', false);
+            console.log('Start/next handler ran');
+             console.log($('input[name="test"]').prop('disabled'));
+            $('.next-button').addClass('hidden');
             
             if (i < 5) {
                 $('.main').html(`<p>${STORE[i].question}</p><input name="test" type="radio" value="A" />${STORE[i].options[0]}<br><input name="test" type="radio" value="B" />${STORE[i].options[1]}<br><input name="test" type="radio" value="C" />${STORE[i].options[2]}<br><input name="test" type="radio" value="D" />${STORE[i].options[3]}`);
@@ -46,11 +50,16 @@ function presentQuestion() {
                     $('.test-score-button').removeClass('hidden');
             };
             $('input[name="test"]').on('click', function() {
+                
+                $('input[name="test"]').prop('disabled', true);
+                
+                $('.next-button').removeClass('hidden');
+                
                 if ($(this).val() == STORE[i-1].correct) {
                     $('.js-answer').html('You are correct!');
                     correctScore += 1;
-             } else {
-                $('.js-answer').html(`You are incorrect, the correct answer is ${STORE[i-1].correct}`);
+                }  else {
+               $('.js-answer').html(`You are incorrect, the correct answer is ${STORE[i-1].correct}`);
                  incorrectScore += 1;
             };
         });
@@ -65,6 +74,11 @@ function presentQuestion() {
 
 
 };
+
+
+
+
+
 
 
 
