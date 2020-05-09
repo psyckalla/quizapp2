@@ -3,13 +3,26 @@
     margin: 0;
     padding: 0;
     background-color: rgb(247, 202, 247);
+    
 }
 
-.main-picture {
-    width: 150px;
-    height: 200px;
+body {
+    border: 3px solid rgb(71, 27, 71);
+    margin: 10px;
+    height: 100%;
+    padding: 10px;
+}
+
+
+
+img {
+    width: 250px;
+    height: 350px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 2px solid black;
 }
 
 .hidden {
@@ -24,26 +37,39 @@ header {
 
 h1 {
     text-align: center;
+    font-size: 3.5em;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 20px; 
-    line-height: 2em;
-    font-weight: bold; 
+.container-state {
+    font-size: 3em;
+    margin: 50px;
+    font-weight: bold;
 }
-
-input {
-    border: 2px solid rgb(73, 8, 73);
-}
-
 
 button {
+    font-size: 4em;
+    font-weight: bold;
     width: 100%;
-    height: 30px;
-    font-weight: bolder;
-    
+    margin: auto;
 }
+
+.main, input {
+    font-size: 3em;
+    size: 3opx;
+
+};
+
+@media screen and (max-width: 320px) {
+    h1 {
+        color: red;
+    }
+}
+
+
+
+
+
+
+
+
 
