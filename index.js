@@ -24,14 +24,12 @@ function clickStart() {
         overallQuestionStatus();
 
     });
-    console.log('clickstart ran');
 };
 
 //removing the start button
 
 function hideStartButton() {
     $('.js-start-button').addClass('hidden');
-    console.log('hidestartbutton ran');
 };
 
 
@@ -40,9 +38,6 @@ function hideStartButton() {
 function updateQuestionNumber() {
     const addedOne = STORE.questionNumber += 1;
     $('.js-question-number').html(addedOne);
-
-
-    console.log('updateQuestionNumber ran');
 };
 
 
@@ -90,13 +85,11 @@ function clickOption() {
         revealAnswer();
         showNextButton();
     });
-    console.log('logoption ran');
 };
 
 //clicking on an option disables the other options
 function disableOptions() {
     $('input[name="test"]').prop('disabled', true);
-    console.log('disableoptions ran');
 };
 
 
@@ -119,12 +112,13 @@ function revealAnswer() {
     console.log(actualQuestion);
         if ((STORE.inputVal) == STORE.questions[STORE.questionNumber - 1].correct) {
             $('.js-answer').html('You are correct!');
+            
+console.log('this ran');
             updateCorrect();
         }  else {
             $('.js-answer').html(`You are incorrect, the correct answer is ${STORE.questions[STORE.questionNumber - 1].correct}`);
             updateIncorrect();
 };
-
 };
 
 
@@ -191,7 +185,6 @@ function endQuiz() {
     const endOfQuizGrade = (STORE.correctScore/STORE.questionNumber) * 100
     $('.main').html(`Congratulations! You have finished the quiz. Your score is ${endOfQuizGrade}%`)
     restartQuiz();
-    console.log('endquiz ran');
 
 };
 
@@ -205,8 +198,7 @@ function restartQuiz() {
     $('.js-reset').removeClass('hidden');
     $('.js-reset').click(function(){
         location.reload(true);
-    })
-    console.log('restartquiz');
+    });
 };
 
 function lastQuestion() {

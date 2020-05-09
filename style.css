@@ -16,12 +16,12 @@ body {
 
 
 img {
-    width: 250px;
-    height: 350px;
+    width: 200px;
+    height: 300px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     border: 2px solid black;
 }
 
@@ -37,32 +37,47 @@ header {
 
 h1 {
     text-align: center;
-    font-size: 3.5em;
+    font-size: 2.5em;
 }
 
 .container-state {
-    font-size: 3em;
+    font-size: 2em;
     margin: 50px;
     font-weight: bold;
 }
 
 button {
-    font-size: 4em;
+    font-size: 3em;
     font-weight: bold;
     width: 100%;
     margin: auto;
 }
 
-.main, input {
-    font-size: 3em;
-    size: 3opx;
+.main, input, .js-answer {
+    font-size: 2em;
+    size: 30px;
 
-};
+}
 
-@media screen and (max-width: 320px) {
-    h1 {
-        color: red;
+@media screen and (min-width: 550px) {
+    
+    img {
+        width: 150px;
+        height: 200px;
     }
+    h1 {
+        font-size: 3em;
+    }
+    .container-state {
+        font-size: 2em;
+    }
+    .main, .js-answer {
+        font-size: 1.5em;
+    }
+    button {
+        font-size: 2em;
+    }
+
 }
 
 
