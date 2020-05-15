@@ -66,12 +66,12 @@ if ((thisNumber) < 4) {
 
 function renderQuestions() {
     
-    $('.main').html(`<p>${STORE.questions[STORE.questionNumber - 1].question}<div class="js-questions"></p>
+    $('.main').html(`<p class="questions">${STORE.questions[STORE.questionNumber - 1].question}<div class="js-questions"></p>
         <label for="test">Pick one option:</label><br>
-        <input name="test" type="radio" value="A" />${STORE.questions[STORE.questionNumber - 1].options[0]}<br>
-        <input name="test" type="radio" value="B" />${STORE.questions[STORE.questionNumber - 1].options[1]}<br>
-        <input name="test" type="radio" value="C" />${STORE.questions[STORE.questionNumber - 1].options[2]}<br>
-        <input name="test" type="radio" value="D" />${STORE.questions[STORE.questionNumber - 1].options[3]}</div>`);
+        <input class="option-questions big" name="test" type="radio" value="A" />${STORE.questions[STORE.questionNumber - 1].options[0]}<br>
+        <input class="option-questions big" name="test" type="radio" value="B" />${STORE.questions[STORE.questionNumber - 1].options[1]}<br>
+        <input class="option-questions big" name="test" type="radio" value="C" />${STORE.questions[STORE.questionNumber - 1].options[2]}<br>
+        <input class="option-questions big" name="test" type="radio" value="D" />${STORE.questions[STORE.questionNumber - 1].options[3]}</div>`);
         
 };
 
@@ -183,7 +183,7 @@ function updateIncorrectNumber() {
 function endQuiz() {
     
     const endOfQuizGrade = (STORE.correctScore/STORE.questionNumber) * 100
-    $('.main').html(`Congratulations! You have finished the quiz. Your score is ${endOfQuizGrade}%`)
+    $('.main').html(`<p class="answers">Congratulations! You have finished the quiz. Your score is ${endOfQuizGrade}%</p>`)
     restartQuiz();
 
 };
